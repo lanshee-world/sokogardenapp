@@ -45,6 +45,9 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setPhone("");
+      setTimeout(() => {
+        setSuccess("");
+      },5000);
     }
     catch(error){
       // set the loading back to default
@@ -59,7 +62,7 @@ const Signup = () => {
       <div className="card col-md-6 shadow p-4">
         <h1 className='text-primary'>Sign Up</h1>
         
-        <h5 className= "text-warning">{loading}</h5>
+        <h5 className= "text-info">{loading}</h5>
         <h3 className='text-success'>{success}</h3>
         <h4 className='text-danger'>{error}</h4>
 
