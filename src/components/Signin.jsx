@@ -66,6 +66,7 @@ const Signin = () => {
         <h1 className='text-primary'>Sign in</h1>
 
         <h5 className="text-info">{loading}</h5>
+        <h5 className='text-danger'>{error}</h5>
 
         <form onSubmit={handlesubmit}>
           <input type='email'
