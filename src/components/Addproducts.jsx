@@ -46,6 +46,13 @@ const Addproducts = () => {
     setProductDescription("");
     setProductCost("");
     setProductPhoto("");
+
+    // clearing the form
+    e.target.reset()
+
+    setTimeout(()=>{
+      setSuccess("");
+    },5000);
     }
     catch(error){
       // set the loading hook back to default
@@ -69,7 +76,7 @@ const Addproducts = () => {
         <form onSubmit={handleSubmit}>
           <input type="text" 
           placeholder='Enter the product name'
-          className='form-cotrol'
+          className='form-control'
           required
           value ={product_name}
           onChange={(e) => setProductName(e.target.value)}/> <br />
